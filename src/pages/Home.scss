@@ -1,0 +1,106 @@
+@import "@/styles/variables";
+@import "@/styles/colors";
+@import "@/styles/typography";
+@import "@/styles/mixins";
+
+.home {
+  background-color: $neutral-sand;
+  padding: $space-2xl $space-xl;
+
+  .home__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: $space-xl;
+    margin-bottom: $space-3xl;
+
+    @include respond(sm) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__intro {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $space-md;
+
+    h1 {
+      color: $text-primary;
+      font-weight: bold;
+      @include fluid-type(1.75rem, 3rem);
+    }
+
+    .cta-button {
+      background-color: $accent-yellow;
+      color: $text-primary;
+      border: none;
+      border-radius: $radius-pill;
+      padding: $space-sm $space-xl;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: $shadow-sm;
+      cursor: pointer;
+      width: fit-content;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: $accent-orange;
+      }
+
+      &:active {
+        background-color: $accent-peach;
+      }
+    }
+  }
+
+  &__mascot {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    gap: $space-xl;
+    flex-wrap: wrap;
+    margin-top: $space-2xl;
+
+    @include respond(md) {
+      justify-content: center;
+      gap: $space-lg;
+    }
+  }
+}
+
+.feature {
+  max-width: 200px;
+  text-align: center;
+  color: $text-primary;
+
+  img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: $space-sm;
+  }
+
+  h3 {
+    font-size: $font-h3-size;
+    line-height: $font-h3-line;
+    margin-bottom: $space-xs;
+    color: $text-primary;
+  }
+
+  p {
+    font-size: $font-body-small-size;
+    line-height: $font-body-small-line;
+    color: $text-secondary;
+  }
+}

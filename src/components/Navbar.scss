@@ -1,0 +1,51 @@
+@import "@/styles/variables";
+@import "@/styles/colors";
+@import "@/styles/typography";
+@import "@/styles/mixins";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-md $space-xl;
+  background-color: $neutral-sand;
+
+  &__logo img {
+    height: 50px;
+    width: auto;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    gap: $space-lg;
+
+    li a {
+      text-decoration: none;
+      color: $text-primary;
+      font-size: 0.95rem;
+      font-weight: 500;
+      position: relative;
+      padding: 4px 6px;
+
+      &.active {
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  @include respond(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__links {
+      flex-direction: column;
+      gap: $space-sm;
+      margin-top: $space-sm;
+    }
+  }
+}

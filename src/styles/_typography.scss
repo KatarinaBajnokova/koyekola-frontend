@@ -1,0 +1,83 @@
+// src/styles/_typography.scss
+
+// Display
+$font-display-xl-size: 64px;
+$font-display-xl-line: 80px;
+
+$font-display-l-size: 48px;
+$font-display-l-line: 80px;
+
+// Heading
+$font-h1-size: 36px;
+$font-h1-line: 120%;
+$font-h2-size: 28px;
+$font-h2-line: 130%;
+$font-h3-size: 22px;
+$font-h3-line: 130%;
+
+// Body
+$font-body-large-size: 18px;
+$font-body-large-line: 35px;
+
+$font-body-default-size: 16px;
+$font-body-default-line: 50px;
+
+$font-body-small-size: 14px;
+$font-body-small-line: 30px;
+
+// Label
+$font-label-default-size: 12px;
+$font-label-default-line: 140%;
+$font-label-muted-line: 140%;
+
+// Utility classes
+.display-xl {
+  font-size: $font-display-xl-size;
+  line-height: $font-display-xl-line;
+}
+
+.display-l {
+  font-size: $font-display-l-size;
+  line-height: $font-display-l-line;
+}
+
+.h1 {
+  font-size: $font-h1-size;
+  line-height: $font-h1-line;
+}
+
+.h2 {
+  font-size: $font-h2-size;
+  line-height: $font-h2-line;
+}
+
+.h3 {
+  font-size: $font-h3-size;
+  line-height: $font-h3-line;
+}
+
+.body-large {
+  font-size: $font-body-large-size;
+  line-height: $font-body-large-line;
+}
+
+.body-default {
+  font-size: $font-body-default-size;
+  line-height: $font-body-default-line;
+}
+
+.body-small {
+  font-size: $font-body-small-size;
+  line-height: $font-body-small-line;
+}
+
+.label {
+  font-size: $font-label-default-size;
+  line-height: $font-label-default-line;
+}
+
+.label-muted {
+  font-size: $font-label-default-size;
+  line-height: $font-label-muted-line;
+  color: #888; // optional muted tone
+}

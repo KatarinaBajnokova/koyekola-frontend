@@ -1,0 +1,52 @@
+// 📱 Media Query Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1440px;
+
+// 🧵 Media Query Helper
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+
+// 🔠 Responsive Font Sizing
+@mixin fluid-type($min-font, $max-font, $min-vw: 320px, $max-vw: 1440px) {
+  font-size: clamp(
+    #{$min-font},
+    calc(
+      #{$min-font} + (#{strip-unit($max-font)} - #{strip-unit($min-font)}) * ((
+              100vw - #{$min-vw}
+            ) / (#{strip-unit($max-vw)} - #{strip-unit($min-vw)}))
+    ),
+    #{$max-font}
+  );
+}
+
+// 📦 Card Reset
+@mixin card-style {
+  background-color: $bg-card;
+  border-radius: $radius-md;
+  box-shadow: $shadow-card;
+  padding: $space-md;
+}
