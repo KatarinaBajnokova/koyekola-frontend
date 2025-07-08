@@ -1,0 +1,52 @@
+@use "@/styles/styles" as *;
+
+.categories {
+  padding: $space-3xl $space-xl;
+  text-align: center;
+  background-color: $neutral-sand;
+
+  .h1 {
+    margin-bottom: $space-md;
+  }
+
+  .body-default {
+    margin-bottom: $space-xl;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space-2xl;
+  }
+}
+
+.category-card {
+  width: 160px;
+  padding: $space-lg;
+  background-color: $bg-card;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-md;
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: $space-sm;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $text-primary;
+    margin: 0;
+  }
+}

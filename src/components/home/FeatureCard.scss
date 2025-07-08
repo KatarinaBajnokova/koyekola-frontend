@@ -1,0 +1,26 @@
+@use "@/styles/styles" as *;
+
+.feature {
+  max-width: 200px;
+  text-align: center;
+  color: $text-primary;
+
+  img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: $space-sm;
+  }
+
+  h3 {
+    font-size: $font-h3-size;
+    line-height: $font-h3-line;
+    margin-bottom: $space-xs;
+    color: $text-primary;
+  }
+
+  p {
+    font-size: $font-body-small-size;
+    line-height: $font-body-small-line;
+    color: $text-secondary;
+  }
+}

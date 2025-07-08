@@ -1,7 +1,4 @@
-@import "./variables";
-@import "./colors";
-@import "./typography";
-@import "./mixins";
+@use "@/styles/styles" as *;
 
 body {
   margin: 0;

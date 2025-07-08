@@ -1,7 +1,4 @@
-@import "@/styles/variables";
-@import "@/styles/colors";
-@import "@/styles/typography";
-@import "@/styles/mixins";
+@use "@/styles/styles" as *;
 
 .navbar {
   display: flex;
@@ -20,20 +17,23 @@
     display: flex;
     gap: $space-lg;
 
-    li a {
-      text-decoration: none;
-      color: $text-primary;
-      font-size: 0.95rem;
-      font-weight: 500;
-      position: relative;
-      padding: 4px 6px;
+    li {
+      a {
+        text-decoration: none;
+        color: $text-primary;
+        font-size: 0.95rem;
+        font-weight: 500;
+        position: relative;
+        padding: 4px 6px;
+        transition: color 0.2s ease;
 
-      &.active {
-        font-weight: bold;
-      }
+        &.active {
+          font-weight: bold;
+        }
 
-      &:hover {
-        color: $brand-primary;
+        &:hover {
+          color: $brand-primary;
+        }
       }
     }
   }

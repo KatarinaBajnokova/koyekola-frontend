@@ -1,0 +1,25 @@
+@use "@/styles/styles" as *;
+
+.mini-jeux {
+  padding: $space-3xl $space-xl;
+  text-align: center;
+  background-color: $neutral-sand;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: $space-xs;
+  }
+
+  .body-default {
+    font-size: 1rem;
+    margin-bottom: $space-md;
+  }
+
+  &__games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space-2xl;
+    margin-top: $space-xl;
+  }
+}

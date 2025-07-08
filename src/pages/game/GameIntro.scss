@@ -1,0 +1,126 @@
+@use "@/styles/styles" as *;
+
+.game-intro-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 4rem;
+
+  background-color: $neutral-sand;
+  padding: 2rem;
+}
+
+.game-page__intro {
+  max-width: 500px;
+  width: 100%;
+
+  padding: 2rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.category-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.category-image-wrapper {
+  width: 120px;
+  height: 120px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: $text-primary;
+}
+
+.difficulty-selector {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: $text-primary;
+
+  label {
+    margin-right: 0.5rem;
+    font-weight: 500;
+  }
+
+  select {
+    background-color: $neutral-beige;
+    border: 2px solid $neutral-sand;
+    padding: 0.5rem 1rem;
+    padding-right: 2.5rem;
+    border-radius: 0.75rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: $text-primary;
+    cursor: pointer;
+    box-shadow: 0 2px 4px $ui-shadow-light;
+    transition: all 0.3s ease;
+    appearance: none;
+
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+
+    &:hover {
+      background-color: $ui-hover;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $focus-primary;
+      box-shadow: 0 0 0 3px rgba($focus-primary, 0.3);
+    }
+
+    &:disabled {
+      background-color: $ui-disabled;
+      color: $text-tertiary;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.start-button {
+  background-color: $brand-primary;
+  color: $text-inverse;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $brand-primary-dark;
+  }
+}
+
+@media (max-width: 500px) {
+  .game-page__intro {
+    padding: 1.25rem;
+  }
+
+  .category-image-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .start-button {
+    width: 100%;
+  }
+}
